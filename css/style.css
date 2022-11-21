@@ -59,6 +59,11 @@ body {
   line-height: calc(16 / 12);
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  background-color: transparent;
+  height: 40px;
+  min-width: 160px;
 }
 
 .btn:hover,
@@ -75,7 +80,7 @@ body {
 
 .title {
   font-family: 'Raleway', sans-serif;
-  font-size: 72px;
+  font-size: 42px;
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
 }
@@ -103,9 +108,23 @@ body {
   background-color: grey;
 }
 
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-cont {
+  margin-left: auto;
+}
+
 .header-logo {
   padding: 32px 0px;
   display: block;
+  margin-right: 130px;
 }
 
 .header-link {
@@ -114,6 +133,10 @@ body {
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
   color: var(--primary-link-color);
+}
+
+.header-list > li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .header-link:hover,
@@ -131,6 +154,7 @@ body {
 
 .header-btn {
   color: var(--primary-link-color);
+  margin-left: 40px;
 }
 
 /* --HERO-- */
@@ -139,8 +163,17 @@ body {
   background-color: #757575;
 }
 
+.hero .container {
+  display: flex;
+}
+
 .hero-right {
   padding: 184px 526px 208px 100px;
+  flex-grow: 1;
+}
+
+.hero-list {
+  width: 100px;
 }
 
 .sub-title {
@@ -180,6 +213,22 @@ body {
   padding: 120px 0px;
 }
 
+.about .container {
+  display: flex;
+}
+
+.list-about {
+  display: flex;
+}
+
+.about-wrap {
+  margin-left: 30px;
+}
+
+.about-items:not(:last-child) {
+  margin-right: 30px;
+}
+
 .about-pre-title {
   color: var(--primary-header-color);
   margin-bottom: var(--main-margin);
@@ -213,6 +262,11 @@ body {
   padding: 120px 0;
 }
 
+.prices-list-wrap {
+  display: flex;
+  gap: 30px;
+}
+
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: var(--main-margin);
@@ -224,10 +278,17 @@ body {
 
 .prices-list {
   padding: 30px 20px;
+  flex-grow: 1;
 }
 
 .prices-items {
   margin-bottom: var(--main-margin);
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-items:last-child {
+  margin-bottom: 0px;
 }
 
 .prices-elem {
@@ -237,10 +298,10 @@ body {
   color: #9da4bd;
 }
 .prices-btn {
-  color: #ffffff;
   margin: 0 auto;
   display: block;
   margin-top: 44px;
+  color: #303030;
 }
 
 /* --BENEFITS-- */
@@ -249,12 +310,26 @@ body {
   padding: 120px 0;
 }
 
+.benefits-list {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
+}
+
 .benefits-items {
   background: #f7f7f7;
   width: 170px;
   height: 133px;
   padding: 20px 24px;
   text-align: center;
+}
+
+.benefits-items:nth-child(2n + 1) {
+  margin-right: 30px;
+}
+
+.benefits-items:nth-child(2n) {
+  margin-top: 30px;
 }
 
 .benefits-items > span {
@@ -305,6 +380,18 @@ body {
   margin-bottom: 44px;
 }
 
+.barber-list {
+  display: flex;
+}
+
+.barbers-items {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.barbers-items:not(:last-child) {
+  margin-right: 30px;
+}
+
 .barbers-name {
   font-weight: 400;
   font-size: 18px;
@@ -328,6 +415,24 @@ body {
 .gallery {
   padding: 120px 0;
 }
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.gallery-item {
+  width: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+/* .gallery-list:last-child {
+  margin-right: 0px;
+  margin-bottom: 0px;
+} */
 
 .gallery-pre-title {
   color: #303030;
