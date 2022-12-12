@@ -385,6 +385,79 @@
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
+        <p class="modal-heading">Contact us</p>
+        <div class="modal-iput-group">
+          <label for="name">Введіть Ваше ім'я</label>
+          <input
+            type="text"
+            name="name"
+            class="modal-input"
+            placeholder="Введіть Ваше ім'я"
+            required
+            id="name"
+          />
+        </div>
+        <div class="modal-iput-group">
+          <label for="email">Введіть ваш email</label>
+          <input
+            type="email"
+            name="email"
+            class="modal-input"
+            placeholder="Введіть ваш email"
+            id="email"
+            required
+          />
+        </div>
+        <div class="modal-iput-group">
+          <label for="tel">Введіть ваш номер телефону</label>
+          <input
+            type="tel"
+            name="tel"
+            class="modal-input"
+            value="+380"
+            placeholder="+380 (63) 111-11-11"
+            title="+380 (63) 111-11-11"
+            pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+            id="tel"
+            required
+          />
+        </div>
+        <fieldset>
+          <legend>Розмір</legend>
+          <input type="radio" name="size" id="big" value="big" checked />
+          <label for="big">M</label>
+          <input type="radio" name="size" id="small" value="small" />
+          <label for="small">S</label>
+        </fieldset>
+        <fieldset>
+          <legend>Додати</legend>
+          <input type="checkbox" name="accessories" id="belt" value="belt" checked />
+          <label for="belt">Пояс</label>
+          <input type="checkbox" name="accessories" id="bracelet" value="bracelet" checked />
+          <label for="bracelet">Браслет</label>
+          <input type="checkbox" name="accessories" id="pendant" value="pendant" checked />
+          <label for="pendant">Кулон</label>
+          <input type="checkbox" name="accessories" id="brooch" value="brooch" checked />
+          <label for="brooch">Брошь</label>
+        </fieldset>
+        <div class="modal-iput-group">
+          <label for="comment">Виберіть місто</label>
+          <select name="city" id="city" class="modal-select">
+            <option value="Kyiv">Kyiv</option>
+            <option value="Lviv">Lviv</option>
+            <option value="Odesa" selected>Odesa</option>
+          </select>
+        </div>
+        <div class="modal-iput-group">
+          <label for="comment">Введіть коментар</label>
+          <textarea
+            name="comment"
+            id="comment"
+            class="modal-text"
+            placeholder="Введіть коментар"
+          ></textarea>
+        </div>
+        <button type="submit">Відправити</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
