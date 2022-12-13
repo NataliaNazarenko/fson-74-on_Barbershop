@@ -328,10 +328,27 @@
       <div class="contact-wrap">
         <div class="container">
           <section class="form">
-            <div class="container">
-              <h2 class="form-title title">Online-booking</h2>
-              <button type="button" class="form-btn btn">send</button>
-            </div>
+            <h2 class="form-title title">Online-booking</h2>
+            <form class="contact-form">
+              <input
+                type="text"
+                class="contact-input contact-form-item"
+                name="name"
+                placeholder="Name"
+              />
+              <input
+                type="tel"
+                class="contact-input contact-form-item"
+                name="phone"
+                placeholder="Phone"
+              />
+              <textarea
+                name="massege"
+                class="contact-textarea contact-form-item"
+                placeholder="Massage"
+              ></textarea>
+            </form>
+            <button type="submit" class="contact-btn btn">send</button>
           </section>
           <section class="contacts">
             <div class="container">
@@ -388,39 +405,56 @@
         <p class="modal-heading">Contact us</p>
         <div class="modal-iput-group">
           <label for="name">Введіть Ваше ім'я</label>
-          <input
-            type="text"
-            name="name"
-            class="modal-input"
-            placeholder="Введіть Ваше ім'я"
-            required
-            id="name"
-          />
+          <div class="modal-input-wrapper">
+            <input
+              type="text"
+              name="name"
+              class="modal-input"
+              placeholder="Введіть Ваше ім'я"
+              required
+              id="name"
+            />
+            <svg class="modal-input-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </div>
         </div>
         <div class="modal-iput-group">
           <label for="email">Введіть ваш email</label>
-          <input
-            type="email"
-            name="email"
-            class="modal-input"
-            placeholder="Введіть ваш email"
-            id="email"
-            required
-          />
+
+          <div class="modal-input-wrapper">
+            <input
+              type="email"
+              name="email"
+              class="modal-input"
+              placeholder="Введіть ваш email"
+              id="email"
+              required
+            />
+            <svg class="modal-input-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
         </div>
         <div class="modal-iput-group">
           <label for="tel">Введіть ваш номер телефону</label>
-          <input
-            type="tel"
-            name="tel"
-            class="modal-input"
-            value="+380"
-            placeholder="+380 (63) 111-11-11"
-            title="+380 (63) 111-11-11"
-            pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-            id="tel"
-            required
-          />
+
+          <div class="modal-input-wrapper">
+            <input
+              type="tel"
+              name="tel"
+              class="modal-input"
+              placeholder="+380 (63) 111-11-11"
+              title="+380 (63) 111-11-11"
+              pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              id="tel"
+              required
+            />
+            <!--value="+380"-->
+            <svg class="modal-input-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
         </div>
         <fieldset>
           <legend>Розмір</legend>
@@ -456,6 +490,15 @@
             class="modal-text"
             placeholder="Введіть коментар"
           ></textarea>
+        </div>
+        <div class="modal-iput-group">
+          <input
+            type="checkbox"
+            name="politic"
+            id="politic"
+            class="modal-politic-check visually-hidden"
+          />
+          <label for="politic" class="modal-politic-label">Політика користувача</label>
         </div>
         <button type="submit">Відправити</button>
       </div>
